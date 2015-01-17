@@ -12,14 +12,11 @@
         </h6>
 
         <div class="image-holder">
-            {% if item.zoomable %}
-                <a href="/post/{{ item.id }}">
+               <a href="/post/{{ item.id }}">
                     <img src="{{ item.image }}" title="{{ item.title }}" alt="{{ item.title }}"/>
-                </a>
-            {% else %}
-                <img src="{{ item.image }}" title="{{ item.title }}" alt="{{ item.title }}"/>
-            {% endif %}
+              </a>
         </div>
+
         <noindex>
             <div class="permalink"><a href="/post/{{ item.id }}">permalink</a></div>
         </noindex>
@@ -28,3 +25,4 @@
         <div class="clear"></div>
     </div>
 </div>
+

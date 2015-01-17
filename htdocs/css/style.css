@@ -85,7 +85,7 @@ div.item {
     position: relative;
     display: inline-block;
     padding: 10px;
-    border: 1px solid;
+   /* border: 1px solid; */
     text-align: left;
     font-size: 13px;
 }
@@ -258,3 +258,4 @@ span.rating a {
     width: 14%;
     text-align: left;
 }
+
