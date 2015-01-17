@@ -1,9 +1,6 @@
 <?php
-
 class ContentHandler extends Page {
-
     const PreviewRecangle = 750;
-
     public function showFullPostImage() {
         $args = func_get_arg(0);
         $basePath = $args[0].'/'.$args[1].'/'.$args[2].'/'.$args[3];
@@ -11,7 +8,6 @@ class ContentHandler extends Page {
         $destPath = 'image/full/'.$basePath;
         $this->showPostImage($destPath, $sourcePath, 1280);
     }
-
     public function showSmallPostImage() {
         $args = func_get_arg(0);
         $basePath = $args[0].'/'.$args[1].'/'.$args[2].'/'.$args[3];
@@ -19,13 +15,11 @@ class ContentHandler extends Page {
         $destPath = 'image/small/'.$basePath;
         $this->showPostImage($destPath, $sourcePath, self::PreviewRecangle);
     }
-
     private function showPostImage($destPath, $sourcePath, $maxSize) {
         if(file_exists($sourcePath)) {
             @mkdir(dirname($destPath), 0777, true);
             $sourceImage = imagecreatefromjpeg($sourcePath);
             $sizes = getimagesize($sourcePath);
-
             if($sizes[0] > $sizes[1]) {
                 if($sizes[0] > $maxSize) {
                     $width = $maxSize;
@@ -56,9 +50,7 @@ class ContentHandler extends Page {
         }
         else {
             $this->getSlim()->response()->status(404);
-
             return;
         }
     }
-
 }
