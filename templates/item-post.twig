@@ -1,13 +1,11 @@
 <div class="item-container">
     <div class="item" id="{{ item.id }}">
-
             {% if item.title is empty %}
                 {{ item.title }}
             {% else %}
         <h5><a href="/post/{{ item.title }}/">{{ item.title }}</a> </h5>
             {% endif %}
             {% include "widgets/postVote.twig" %}
-
 
         <h6>
             {{ item.photographer }}
