@@ -18,7 +18,7 @@
         <div class="image-holder">
             {% if item.zoomable %}
                 <a href="/post/{{ item.id }}">
-                    <img src="{{ item.tmb }}" title="{{ item.title }}" alt="{{ item.title }}"/>
+                    <img  style="width: 800px" src="{{ item.tmb }}" title="{{ item.title }}" alt="{{ item.title }}"/>
                 </a>
             {% else %}
                 <img src="{{ item.image }}" title="{{ item.title }}" alt="{{ item.title }}"/>

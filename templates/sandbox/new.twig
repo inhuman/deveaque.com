@@ -41,12 +41,7 @@
         <p>Waiting to approve {{ count  }}</p>
     </div>
 
-    <form method="POST" action="/sandbox/trash">
-        <input type="hidden" name="path" value="{{ path }}" >
 
-        <button type="submit">[TRASH]</button>
-
-    </form>
 
     <div class="tagsSandboxRight">
 
@@ -101,7 +96,12 @@
 </form>
 
     <div class="tagsSandboxRight">
+<form method="POST" action="/sandbox/trash">
+ <input type="hidden" name="path" value="{{ path }}" >
 
+    <button type="submit">[TRASH]</button>
+
+</form>
     </div>
 
 
