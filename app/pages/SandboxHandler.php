@@ -34,7 +34,7 @@ class SandboxHandler extends Page{
 
     static public function ShowLastPic()
     {
-        $FilesArr = scandir('/home/deveaque/Content');
+        $FilesArr = array_diff(scandir('/home/deveaque/Content'), array('..', '.'));
         $fullPath = "/image/Content/".$FilesArr[3];
         return $fullPath;
     }
